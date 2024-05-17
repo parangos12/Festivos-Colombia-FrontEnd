@@ -1,0 +1,13 @@
+.centrar{
+    text-align: center; /* Centrar horizontalmente */
+    display: flex; /* Utilizamos flexbox para centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente con flexbox */
+    width: 100%; /* Ancho completo */ 
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    height: 100vh; /* Altura del 100% del viewport */  
+}

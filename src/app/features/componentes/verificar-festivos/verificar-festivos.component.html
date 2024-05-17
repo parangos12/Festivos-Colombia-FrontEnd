@@ -1,0 +1,16 @@
+<div>
+    <h2>Verificar Festivos</h2>
+    <p>Seleccione una fecha para verificar si es festivo en Colombia</p>
+    <br>
+</div>
+
+<div>
+    <mat-form-field>
+        <mat-label>Seleccionar Fecha</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="verificarFestivo()">Verificar</button>    
+</div>

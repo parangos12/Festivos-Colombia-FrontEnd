@@ -1,0 +1,16 @@
+<div>
+    <h2>Festivos por año</h2>
+    <p>Obtenga todos los festivos de un año en Colombia</p>
+    <br>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>Seleccionar Año</mat-label>
+        <input matInput type="number" [(ngModel)]="anio" required>
+        <mat-hint>YYYY</mat-hint>
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="obtenerFestivos()">Obtener</button>
+    <ngx-datatable [rows]="festivos" [columns]="columnas" className ="dark">
+</ngx-datatable>
+</div>
+
