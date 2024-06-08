@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    urlBase: 'http://localhost:8080/festivos',
+    urlBase: 'https://api-rest-festivos-2.onrender.com/festivos',
 };

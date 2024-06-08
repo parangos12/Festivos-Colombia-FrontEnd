@@ -20,7 +20,7 @@ export class ObtenerFestivosComponent {
   public festivos:Festivo[]=[];
    
   constructor(private servicio:FestivosService) { 
-    this.obtenerFestivos();
+    //this.obtenerFestivos();
   }
   public modoColumna = ColumnMode;
   public tipoSeleccion = SelectionType;
