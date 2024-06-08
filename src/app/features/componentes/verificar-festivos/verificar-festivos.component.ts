@@ -3,6 +3,8 @@ import { ReferenciasMaterialModule } from '../../../shared/modulos/referencias-m
 import { MatDatepicker, MatDatepickerInput } from '@angular/material/datepicker';
 import { FestivosService } from '../../servicios/festivos.service';
 import { DateAdapter } from '@angular/material/core';
+import { MatDialog } from '@angular/material/dialog';
+import { VerificarFModalComponent } from '../verificar-fmodal/verificar-fmodal.component';
 
 @Component({
   selector: 'app-verificar-festivos',
@@ -15,7 +17,7 @@ export class VerificarFestivosComponent {
 
   @ViewChild(MatDatepickerInput) datepickerInput: MatDatepickerInput<Date> | undefined;
 
-  constructor(private servicio: FestivosService,private adapter: DateAdapter<Date>) { 
+  constructor(private servicio: FestivosService,private adapter: DateAdapter<Date>,public dialog: MatDialog) { 
     this.verificarFestivo();
   }
 
@@ -29,8 +31,12 @@ export class VerificarFestivosComponent {
   
         this.servicio.verificarFestivo(año, mes, dia).subscribe({
           next: response => {
-            window.alert(response);
-          },
+            this.dialog.open(VerificarFModalComponent, {
+              data: {
+                message: response
+              }
+            });
+                    },
           error: error => {
             window.alert("Error al verificar festivo");
           }

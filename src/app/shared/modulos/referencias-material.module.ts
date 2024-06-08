@@ -50,7 +50,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatAutocompleteModule,
 
     MatProgressSpinnerModule
-  ]
+  ],
+  imports:[MatDialogModule]
 })
 
 export class ReferenciasMaterialModule { }

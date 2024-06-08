@@ -1,0 +1,10 @@
+.centrar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bootstrap {
+    width: 35%;  /* Ajusta el ancho de la tabla al 80% del contenedor padre */
+  }
